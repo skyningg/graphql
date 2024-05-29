@@ -8,7 +8,7 @@ void main() {
 
 //...
 final HttpLink httpLink = HttpLink(
-    "https://api-us-east-1-shared-usea1-02.hygraph.com/v2/cldf0bjvr1rv801un61efbrpm/master");
+    "https://api-us-west-2.hygraph.com/v2/clwjuslu2000008l30u15037y/master");
 
 final ValueNotifier<GraphQLClient> client = ValueNotifier<GraphQLClient>(
   GraphQLClient(

@@ -15,20 +15,14 @@ class BlogRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(7.0),
+      padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
           Expanded(
             flex: 1,
-            // ignore: unnecessary_null_comparison
             child: coverURL != null
-                ? Image.network(
-                    coverURL,
-                    width: 90,
-                    height: 90,
-                  )
+                ? Image.network(coverURL)
                 : const FlutterLogo(),
-            // FlutterLogo(),
           ),
           Expanded(
             flex: 2,
@@ -37,20 +31,14 @@ class BlogRow extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline6
-                      ?.copyWith(fontWeight: FontWeight.bold, fontSize: 15),
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   excerpt,
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText2
-                      ?.copyWith(color: Colors.black54, fontSize: 12),
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ],
             ),
